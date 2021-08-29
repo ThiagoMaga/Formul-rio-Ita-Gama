@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Script.js"></script>
+    <link rel="stylesheet" href="Estilo.css"/>
+    <title>Formulario</title>
+
+</head>
+<body>
+    <div class="box">
+        <fieldset>
+            <form action="" method="GET" onsubmit="return validabtn();">
+                <legend><b> Cadastro Dos Clientes  </b></legend>
+                <br>
+
+                    <div class="inputBox"> 
+                     <label for="nome" class="labelInput">Nome: *</label>
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    </div>
+                <br><br>
+                <div class="inputBox">
+                    <label for="rg" class="labelInput">RG: </label>
+                    <input type="text" name="rg" id="rg" class="inputUser">
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <div class="inputBox">
+                    <input type="cpf" name="cpf" maxlength="12" onblur="return verificarCPF(this.value);" class="inputUser" required>
+                    <label for="cpf" class="labelInput">CPF: *</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <select name="text" id="select" class="inputUser">
+                        <option value=""></option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                    <label for="sexo" class="labelInput">Sexo:</label>
+                    </div>   
+                    <br><br>    
+                <div class="inputBox">
+                    <input type="endereço" address="endereço" maxlength="12" onblur="return verificarENDEREÇO(this.value);" class="inputUser" required>
+                    <label for="endereço" class="labelInput">Endereço: *</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="número" number="número" maxlength="12" onblur="return verificarNÚMERO(this.value);" class="inputUser" required>
+                    <label for="número" class="labelInput">Número: *</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="telefonecelular" cellphone="telefonecelular" maxlength="12" onblur="return verificarTELEFONECELULAR(this.value);" class="inputUser" required>
+                    <label for="telefonecelular" class="labelInput">Telefone Celular: *</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="telefonefixo" cellfixed="telefonefixo" maxlength="12" onblur="return verificarTELEFONEFIXO(this.value);" class="inputUser" required>
+                    <label for="telefonefixo" class="labelInput">Telefone Fixo: *</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="bairro" neighborhood="bairro" maxlength="12" onblur="return verificarBAIRRO(this.value);" class="inputUser" required>
+                    <label for="bairro" class="labelInput">Bairro: *</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="cidade" town="cidade" maxlength="12" onblur="return verificarCIDADE(this.value);" class="inputUser" required>
+                    <label for="cidade" class="labelInput">Cidade: *</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="estado" state="estado" maxlength="12" onblur="return verificarESTADO(this.value);" class="inputUser" required>
+                    <label for="estado" class="labelInput">Estado: *</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="cep" zip code="cep" maxlength="12" onblur="return verificarCEP(this.value);" class="inputUser" required>
+                    <label for="cep" class="labelInput">CEP: *</label>
+                </div>
+                <br><br>
+                <button type="submit">Enviar</button>
+
+            </form>
+        </fieldset>
+    </div>
+    </body>
+</html>
