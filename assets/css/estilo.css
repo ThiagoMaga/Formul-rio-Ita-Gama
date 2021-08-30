@@ -1,0 +1,97 @@
+
+html, body
+{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body
+{
+    background-color: #1C1012;
+    font-family: 'Open Sans', sans-serif;
+}
+
+label, input, button, select, textarea
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+legend
+{
+    border-bottom: #e06806 10px solid;
+    background-image: linear-gradient(180deg, #FFD662 0%, #745409 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    font-weight: 900;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.logotipo
+{
+    display: block;
+    height: 120px;
+    margin: 0 auto;
+}
+
+#cabecalho
+{
+    border-radius: 50px; 
+    padding-left: 50px;
+    margin-bottom: 20px;
+    width: 50%;
+
+}
+
+.grupo
+{
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.inputBox
+{
+    color: white;
+    border-top: #745409;
+
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+input, select
+{
+    border: 0px solid transparent;
+    background-color: #fdefc8;
+    font-size: 16px;
+    padding: 5px;
+}
+
+input:focus-within,
+input:hover,
+input:focus-visible,
+input:active
+{
+    border: 0px solid transparent;
+    outline: none;
+}
+
+button
+{
+    background-color: #745409;
+    border: 0px solid transparent;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+button:hover
+{
+    background-color: #3D4565;
+}

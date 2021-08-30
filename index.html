@@ -1,97 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="Script.js"></script>
-    <link rel="stylesheet" href="Estilo.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilo.css"/>
     <title>Formulario</title>
-
 </head>
 <body>
     <div class="box">
         <fieldset>
-            <form action="" method="GET" onsubmit="return validabtn();">
-                <legend><b> Cadastro Dos Clientes  </b></legend>
+            <form action="#" method="get" onsubmit="return validabtn();">
+                <legend>Cadastro de Clientes</legend>
+                <img src="assets/imagens/logotipo-itau.png" alt="Logotipo do Itau" class="logotipo">
                 <br>
-
-                    <div class="inputBox"> 
-                     <label for="nome" class="labelInput">Nome: *</label>
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    </div>
-                <br><br>
-                <div class="inputBox">
-                    <label for="rg" class="labelInput">RG: </label>
-                    <input type="text" name="rg" id="rg" class="inputUser">
-                </div>
-                <br><br>
+                
+                <div class="grupo">
                     <div class="inputBox">
-                        <label for="cpf" class="labelInput">CPF: *</label>
-                    <input type="cpf" name="cpf" maxlength="12" onblur="return verificarCPF(this.value);" class="inputUser" required>
+                         <label for="nome" class="labelInput">Nome: *</label>
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="rg" class="labelInput">RG: </label>
+                        <input type="text" name="rg" id="rg" class="inputUser">
+                    </div>
+                    <br><br>
+                        <div class="inputBox">
+                            <label for="cpf" class="labelInput">CPF: *</label>
+                        <input type="cpf" name="cpf" maxlength="12" onblur="return verificarCPF(this.value);" class="inputUser" required>
                     
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <label for="sexo" class="labelInput">Sexo:</label>
-                    <select name="text" id="select" class="inputUser">
-                        <option value=""></option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Feminino">Feminino</option>
-                    </select>
-                    </div>   
-                    <br><br>    
-                <div class="inputBox">
-                    <label for="endereço" class="labelInput">Endereço: *</label>
-                    <input type="endereço" address="endereço" maxlength="12" onblur="return verificarENDEREÇO(this.value);" class="inputUser" required>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="sexo" class="labelInput">Sexo:</label>
+                        <select name="text" id="select" class="inputUser">
+                            <option value=""></option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                        </div>
+                        <br><br>
+                    <div class="inputBox">
+                        <label for="endereço" class="labelInput">Endereço: *</label>
+                        <input type="endereço" address="endereço" maxlength="12" onblur="return verificarENDEREÇO(this.value);" class="inputUser" required>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="número" class="labelInput">Número: *</label>
+                        <input type="número" number="número" required>
                     
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <label for="número" class="labelInput">Número: *</label>
-                    <input type="número" number="número" required>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="telefonecelular" class="labelInput">Telefone Celular: *</label>
+                        <input type="telefonecelular" cellphone="telefonecelular" maxlength="9" required>
                     
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <label for="telefonecelular" class="labelInput">Telefone Celular: *</label>
-                    <input type="telefonecelular" cellphone="telefonecelular" maxlength="9" required>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="telefonefixo" class="labelInput">Telefone Fixo: *</label>
+                        <input type="telefonefixo" cellfixed="telefonefixo" maxlength="8">
                     
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <label for="telefonefixo" class="labelInput">Telefone Fixo: *</label>
-                    <input type="telefonefixo" cellfixed="telefonefixo" maxlength="8">
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="bairro" class="labelInput">Bairro: </label>
+                        <input type="bairro" neighborhood="bairro">
                     
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <label for="bairro" class="labelInput">Bairro: </label>
-                    <input type="bairro" neighborhood="bairro">
-                   
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <label for="cidade" class="labelInput">Cidade: *</label>
-                    <input type="cidade" town="cidade" required>
-                  
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <label for="estado" class="labelInput">Estado: *</label>
-                    <input type="estado" state="estado" required>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="cidade" class="labelInput">Cidade: *</label>
+                        <input type="cidade" town="cidade" required>
                     
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="estado" class="labelInput">Estado: *</label>
+                        <input type="estado" state="estado" required>
+                    
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="cep" class="labelInput">CEP: *</label>
+                        <input type="cep" zip code="cep" maxlength="8">
+                    </div>
                 </div>
                 <br><br>
-                <div class="inputBox">
-                    <label for="cep" class="labelInput">CEP: *</label>
-                    <input type="cep" zip code="cep" maxlength="8">
-                </div>
-                <br><br>
+                
                 <button type="submit">Enviar</button>
 
             </form>
         </fieldset>
     </div>
+
+    <script src="assets/js/script.js"></script>
     </body>
 </html>
